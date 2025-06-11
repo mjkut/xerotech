@@ -192,7 +192,7 @@ export default function About() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Passionate software developer with expertise in full-stack development,
-              creating scalable solutions, and delivering exceptional user experiences.
+              creating scalable solutions and delivering exceptional user experiences.
             </p>
           </div>
         </AnimatedSection>

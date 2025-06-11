@@ -27,17 +27,17 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                <Link href="/about" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#projects" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                <Link href="/projects" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                <Link href="/contact" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                   Contact
                 </Link>
               </li>
@@ -59,7 +59,7 @@ export default function Footer() {
                   <a href="https://github.com/mjkut" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                     GitHub
                   </a>
-                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                  <a href="https://linkedin.com/in/Mujaku-Tonderai" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                     LinkedIn
                   </a>
                 </div>
@@ -70,7 +70,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-center text-gray-600 dark:text-gray-400">
-            © {currentYear} Aerisun Tech. All rights reserved.
+            © {currentYear} XeroTech. All rights reserved.
           </p>
         </div>
       </div>

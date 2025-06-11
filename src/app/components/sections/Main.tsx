@@ -6,7 +6,7 @@ import { Code, Database, Smartphone, Brain, Building, Zap } from 'lucide-react';
 const solutions = [
   {
     title: "Web Applications",
-    description: "From simple websites to complex web applications, I can build responsive, scalable, and modern solutions that work across all devices and browsers.",
+    description: "From simple websites to complex web applications, I can build responsive, scalable and modern solutions that work across all devices and browsers.",
     technologies: ["Django", "Wagtail", "React.js", "Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "PostgreSQL"],
     complexity: "Whether it's a simple portfolio site or a complex enterprise application with real-time features, I can deliver.",
     icon: Code,
@@ -38,7 +38,7 @@ const solutions = [
   },
   {
     title: "Enterprise Solutions",
-    description: "Robust, secure, and scalable enterprise-level applications that streamline business processes and improve efficiency.",
+    description: "Robust, secure and scalable enterprise-level applications that streamline business processes and improve efficiency.",
     technologies: ["C#", ".NET", "Microservices", "Docker", "Rest APIs"],
     complexity: "Complex enterprise systems can be successfully implemented with proper planning and architectural design.",
     icon: Building,

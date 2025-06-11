@@ -23,8 +23,8 @@ const projects: Project[] = [
     id: 1,
     title: "ZINGSA Website Redesign",
     shortDescription: "A modern, responsive redesign of the Zimbabwe National Geospatial and Space Agency's official website.",
-    fullDescription: "Redesigned and improved the user interface and experience of the ZINGSA website using HTML, CSS, and JavaScript. Ensured the site was mobile-friendly, optimized for performance, and visually aligned with the agency's brand. Integrated updated content and added sections for news, services, and contact forms.",
-    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "XAMPP"],
+    fullDescription: "Redesigned and improved the user interface and experience of the ZINGSA website using HTML, CSS and JavaScript. Ensured the site was mobile-friendly, optimized for performance, and visually aligned with the agency's brand. Integrated updated content and added sections for news, services, and contact forms.",
+    technologies: ["Django","Python","HTML", "CSS", "JavaScript", "Bootstrap"],
     image: "/projects/zingsa.png",
     results: [
       "Improved site navigation and readability",
@@ -48,15 +48,15 @@ const projects: Project[] = [
       "Improved stock management process"
     ],
     liveUrl: "#",
-    githubUrl: "https://github.com/mjkut/django-products",
+    githubUrl: "https://github.com/mjkut/robust",
     category: "Web Application"
   },
   {
     id: 3,
     title: "Tour Zimbabwe Portal",
     shortDescription: "A tourism web app showcasing Zimbabwe's top destinations with monetization features.",
-    fullDescription: "Built a tourism-focused platform promoting top travel spots in Zimbabwe, with destination images, descriptions, and visitor tips. Monetization plans include affiliate links, sponsored content, and bookings. The site supports multi-category listings and dynamic filtering by region or interest.",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "MongoDB"],
+    fullDescription: "Built a tourism-focused platform promoting top travel spots in Zimbabwe, with destination images, descriptions and visitor tips. Monetization plans include affiliate links, sponsored content and bookings. The site supports multi-category listings and dynamic filtering by region or interest.",
+    technologies: ["DjangoCMS", "CSS", "JavaScript", "HTML", "Bootstrap", "SQLite"],
     image: "/projects/tour-zim.png",
     results: [
       "Showcases 50+ tourist attractions",
@@ -72,7 +72,7 @@ const projects: Project[] = [
     title: "Anonymous Evidence Sharing App",
     shortDescription: "A secure platform for whistleblowers to share evidence without revealing identity.",
     fullDescription: "Developed a secure web app where users can anonymously upload and share evidence related to corruption or misconduct. Built with privacy, encryption, and user safety in mind. Admin features include file review, access logs, and moderation tools.",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Node.js", "Cloudinary"],
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Node.js"],
     image: "/projects/evidence.png",
     results: [
       "Anonymous upload system with metadata removal",
@@ -80,7 +80,7 @@ const projects: Project[] = [
       "Secure file handling and link expiration"
     ],
     liveUrl: "#",
-    githubUrl: "https://github.com/mjkut/evidence-sharing-app",
+    githubUrl: "https://github.com/mjkut/anon-evidence",
     category: "Security & Privacy"
   }
 ];

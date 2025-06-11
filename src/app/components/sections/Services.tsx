@@ -63,7 +63,6 @@ const services: ServiceDetail[] = [
     features: [
       "Cross-platform development",
       "Native feature integration",
-      "Offline functionality",
       "Push notifications",
       "App store deployment",
       "Analytics integration"
