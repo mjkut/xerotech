@@ -52,6 +52,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900`}
       >
         {children}
+        {/* Add Analytics and SpeedInsights components here */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
