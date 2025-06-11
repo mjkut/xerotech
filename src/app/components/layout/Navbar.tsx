@@ -17,7 +17,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
   });
 
   const navLinks: NavLink[] = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/dashboard' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
     { name: 'Services', href: '/services' },
