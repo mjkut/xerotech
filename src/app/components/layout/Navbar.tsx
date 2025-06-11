@@ -53,7 +53,9 @@ export default function Navbar({ className = '' }: NavbarProps) {
               <Link
                 href="/"
                 className="text-2xl font-bold gradient-text cursor-pointer"
-                onClick={() => setIsMobileMenuOpen(false)}
+                // No need to call handleNavClick here for root link, as it just closes menu.
+                // router.push('/') is implicit with href="/"
+                onClick={() => setIsMobileMenuOpen(false)} 
               >
                 Mujaku Tonderai
               </Link>
@@ -71,12 +73,13 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 >
                   <Link
                     href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    // FIX: Use handleNavClick here
+                    onClick={() => handleNavClick(link.href)} 
                     className="text-gray-300 hover:text-white transition-colors duration-300 relative group font-medium"
                   >
                     {link.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 
-                                   transition-all duration-300 group-hover:w-full" />
+                                     transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </motion.div>
               ))}
@@ -132,9 +135,10 @@ export default function Navbar({ className = '' }: NavbarProps) {
               >
                 <Link
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  // FIX: Use handleNavClick here
+                  onClick={() => handleNavClick(link.href)} 
                   className="block w-full text-left text-gray-300 hover:text-white hover:bg-gray-800/50 
-                           px-3 py-2 rounded-lg transition-all duration-300 font-medium"
+                             px-3 py-2 rounded-lg transition-all duration-300 font-medium"
                 >
                   {link.name}
                 </Link>

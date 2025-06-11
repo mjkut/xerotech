@@ -1,5 +1,6 @@
-'use Client';
-import { motion } from 'framer-motion';
+'use client'; 
+// REMOVED: import { motion } from 'framer-motion'; 
+// Motion is not used directly in this file as AnimatedSection handles animations.
 
 import { useState, useEffect } from 'react';
 
@@ -217,7 +218,7 @@ export default function About() {
                       <SkillBar 
                         key={skill.name} 
                         skill={skill} 
-                        delay={categoryIndex * 2 + skillIndex + 5}
+                        delay={categoryIndex * 2 + skillIndex + 5} 
                       />
                     ))}
                   </div>
@@ -234,7 +235,7 @@ export default function About() {
               Professional Experience
             </h3>
             <div className="space-y-8">
-              {experiences.map((experience, index) => (
+              {experiences.map((experience) => ( // 'index' parameter removed from here
                 <div
                   key={experience.title}
                   className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10"
@@ -278,7 +279,7 @@ export default function About() {
               Education
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {education.map((edu, index) => (
+              {education.map((edu) => ( // 'index' parameter removed from here
                 <div
                   key={edu.degree}
                   className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/10"

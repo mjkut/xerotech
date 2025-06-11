@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react'; // These will now be used
+import Image from 'next/image'; // Import Next.js Image component
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -71,6 +72,14 @@ const Hero = () => {
     setCurrentSlide(index);
   };
 
+  const goToPrevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToNextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
   return (
     <section className="relative h-screen overflow-hidden bg-gray-900">
       <AnimatePresence mode="wait">
@@ -82,10 +91,14 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="absolute inset-0"
         >
-          {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-            style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+          {/* Background Image (using Image for optimization) */}
+          <Image
+            src={slides[currentSlide].image}
+            alt={slides[currentSlide].title}
+            fill // Fills the parent div
+            className="object-cover opacity-20" // Apply styles
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw" // Responsive sizing
+            priority={currentSlide === 0} // Prioritize loading for the first slide
           />
           
           {/* Content */}
@@ -118,6 +131,7 @@ const Hero = () => {
                     transition={{ delay: 0.6, duration: 0.6 }}
                     className="space-x-4"
                   >
+                    {/* You can add buttons or calls to action here if needed */}
                   </motion.div>
                 </div>
 
@@ -131,10 +145,14 @@ const Hero = () => {
                   >
                     <div className="relative">
                       <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
-                        <img
+                        {/* Use Next.js Image component for profile picture */}
+                        <Image
                           src="/profile.jpg" // Add your profile picture here
-                          alt="Profile"
-                          className="w-full h-full object-cover"
+                          alt="Developer Profile" // More descriptive alt text
+                          width={320} // Explicit width
+                          height={320} // Explicit height
+                          className="object-cover"
+                          priority // Prioritize loading for the profile picture
                         />
                       </div>
                       {/* Decorative elements */}
@@ -148,6 +166,22 @@ const Hero = () => {
           </div>
         </motion.div>
       </AnimatePresence>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 bg-gray-800/50 hover:bg-gray-700/70 text-white rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft size={24} />
+      </button>
+      <button
+        onClick={goToNextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 bg-gray-800/50 hover:bg-gray-700/70 text-white rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        aria-label="Next slide"
+      >
+        <ChevronRight size={24} />
+      </button>
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
@@ -172,7 +206,7 @@ const Hero = () => {
           initial={{ width: '0%' }}
           animate={{ width: '100%' }}
           transition={{ duration: 8, ease: 'linear' }}
-          key={currentSlide}
+          key={currentSlide} // Resets animation on slide change
         />
       </div>
     </section>

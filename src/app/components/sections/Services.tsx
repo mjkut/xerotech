@@ -3,6 +3,23 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Define the type for a single node in the neural network visualization
+interface Node {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  color: string;
+}
+
+// Define the type for a line connecting two nodes
+interface Line {
+  node1: Node;
+  node2: Node;
+  distance: number;
+}
+
 interface ServiceDetail {
   title: string;
   description: string;
@@ -127,10 +144,10 @@ const services: ServiceDetail[] = [
 // Neural Network Visualization Component
 const NeuralNetworkVisualizer = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // FIX: Initialize with null and allow type 'number | null'
   const animationFrameId = useRef<number | null>(null); 
-  const nodes = useRef<any[]>([]);
-  const lines = useRef<any[]>([]);
+  // FIX: Explicitly type nodes and lines
+  const nodes = useRef<Node[]>([]); 
+  const lines = useRef<Line[]>([]); 
   const mouse = useRef({ x: 0, y: 0, radius: 100 }); // Mouse influence radius
 
   const initNodes = useCallback((canvas: HTMLCanvasElement) => {
@@ -245,7 +262,7 @@ const NeuralNetworkVisualizer = () => {
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full"></canvas>
       <div className="relative z-10 flex items-center justify-center h-full">
         <h3 className="text-4xl md:text-6xl font-extrabold gradient-text bg-clip-text text-transparent bg-gradient-to-r from-[#00bfff] to-[#00ffcc] opacity-90">
-          XeroTech
+          XeroTech {/* Consider changing this to your actual brand name if XeroTech is a placeholder */}
         </h3>
       </div>
     </div>
@@ -262,8 +279,9 @@ export default function Services() {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }} // Changed to whileInView for scroll-triggered animation
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }} // Ensures animation only plays once
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -281,8 +299,9 @@ export default function Services() {
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }} // Changed to whileInView
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }} // Ensures animation only plays once
               className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-primary/50 transition-all duration-300 cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
@@ -297,7 +316,7 @@ export default function Services() {
                   </p>
                   <button
                     className="text-[#00bfff] hover:text-[#00bfff]/80 transition-colors duration-300"
-                    onClick={() => setSelectedService(service)}
+                    onClick={() => setSelectedService(service)} // This button will open the modal
                   >
                     Learn More →
                   </button>
@@ -310,8 +329,9 @@ export default function Services() {
         {/* Interactive Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }} // Changed to whileInView
           transition={{ duration: 0.6, delay: services.length * 0.1 + 0.2 }}
+          viewport={{ once: true }} // Ensures animation only plays once
           className="relative w-full h-[300px] md:h-[400px] bg-gray-900 rounded-xl overflow-hidden shadow-2xl border border-gray-700/50"
         >
           <NeuralNetworkVisualizer />
@@ -345,6 +365,7 @@ export default function Services() {
                     <button
                       onClick={() => setSelectedService(null)}
                       className="bg-gray-700/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-600/50 transition-colors duration-300"
+                      aria-label="Close service details" // Added for accessibility
                     >
                       ✕
                     </button>
