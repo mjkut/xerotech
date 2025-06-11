@@ -4,6 +4,7 @@ import React, { Suspense } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Hero from '../components/sections/Hero';
 import Main from '../components/sections/Main';
+import Footer from '../components/layout/Footer';
 import { ErrorBoundary } from 'react-error-boundary';
 
 function ErrorFallback({ error }: { error: Error }) {
@@ -42,6 +43,7 @@ export default function Dashboard() {
           <Navbar />
           <Hero />
           <Main />
+          <Footer />
         </Suspense>
       </main>
     </ErrorBoundary>
