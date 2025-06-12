@@ -6,7 +6,7 @@ import { Code, Database, Smartphone, Brain, Building, Zap } from 'lucide-react';
 const solutions = [
   {
     title: "Web Applications",
-    description: "From simple websites to complex web applications, I can build responsive, scalable and modern solutions that work across all devices and browsers.",
+    description: "From simple websites to complex web applications, we can build responsive, scalable and modern solutions that work across all devices and browsers.",
     technologies: ["Django", "Wagtail", "React.js", "Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "PostgreSQL"],
     complexity: "Whether it's a simple portfolio site or a complex enterprise application with real-time features, I can deliver.",
     icon: Code,
@@ -16,7 +16,7 @@ const solutions = [
     title: "Odoo ERP Solutions",
     description: "Custom Odoo module development and implementation to streamline your business processes and enhance your ERP capabilities.",
     technologies: ["Python", "Odoo", "PostgreSQL", "XML", "JavaScript", "QWeb", "OWL"],
-    complexity: "From simple customizations to complex business-specific modules, I can develop tailored Odoo solutions.",
+    complexity: "From simple customizations to complex business-specific modules, we can develop tailored Odoo solutions.",
     icon: Database,
     gradient: "from-purple-500 to-pink-600"
   },
@@ -97,7 +97,7 @@ export default function Main() {
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
             In the world of software development, every great innovation starts with an idea. 
             Whether you have a groundbreaking concept or a business challenge that needs a digital solution, 
-            I&apos;m here to assure you that your vision can be transformed into reality.
+            we are here to assure you that your vision can be transformed into reality.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">

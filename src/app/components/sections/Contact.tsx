@@ -284,7 +284,7 @@ export default function Contact() {
                   <span className="text-white">GitHub</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/Mujaku-Tonderai"
+                  href="https://linkedin.com/in/mujakutonde@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg bg-gray-700/50 hover:bg-gray-700 transition-colors duration-300 group"

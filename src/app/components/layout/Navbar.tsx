@@ -4,6 +4,7 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 import { NavLink, NavbarProps } from '@/app/types/navigation';
 
 export default function Navbar({ className = '' }: NavbarProps) {
@@ -35,6 +36,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
+        // Reverted navbar styling to mostly original
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-black/80 backdrop-blur-md border-b border-gray-800/50 shadow-xl shadow-black/20' 
@@ -52,12 +54,22 @@ export default function Navbar({ className = '' }: NavbarProps) {
             >
               <Link
                 href="/"
-                className="text-2xl font-bold gradient-text cursor-pointer"
-                // No need to call handleNavClick here for root link, as it just closes menu.
-                // router.push('/') is implicit with href="/"
+                className="flex items-center space-x-2" // Keep flex for alignment
                 onClick={() => setIsMobileMenuOpen(false)} 
               >
-                Mujaku Tonderai
+                {/* Logo and text wrapper with pill shape */}
+                <div className="flex items-center space-x-2 px-3 py-1 bg-gray-800 rounded-full border border-gray-700"> {/* Pill-shaped wrapper */}
+                  <Image
+                    src="/logo.png" 
+                    alt="XeroTech Softwares Logo"
+                    width={32} 
+                    height={32} 
+                    className="object-contain"
+                  />
+                  <span className="text-sm font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hidden sm:block"> {/* Smaller text, gradient, hide on mobile */}
+                    XeroTech Softwares
+                  </span>
+                </div>
               </Link>
             </motion.div>
 
@@ -73,7 +85,6 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 >
                   <Link
                     href={link.href}
-                    // FIX: Use handleNavClick here
                     onClick={() => handleNavClick(link.href)} 
                     className="text-gray-300 hover:text-white transition-colors duration-300 relative group font-medium"
                   >
@@ -135,10 +146,9 @@ export default function Navbar({ className = '' }: NavbarProps) {
               >
                 <Link
                   href={link.href}
-                  // FIX: Use handleNavClick here
                   onClick={() => handleNavClick(link.href)} 
                   className="block w-full text-left text-gray-300 hover:text-white hover:bg-gray-800/50 
-                             px-3 py-2 rounded-lg transition-all duration-300 font-medium"
+                               px-3 py-2 rounded-lg transition-all duration-300 font-medium"
                 >
                   {link.name}
                 </Link>

@@ -49,9 +49,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            <span className="gradient-text">Software Developer</span>
+            <span className="gradient-text">Software Developers</span>
             <br />
-            <span className="gradient-text">& Web Developer</span>
+            <span className="gradient-text">& Web Developers</span>
           </motion.h1>
           
           <motion.p
@@ -60,7 +60,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Crafting beautiful, responsive and user-friendly web applications with a passion for innovation and a drive to deliver high-quality solutions.
+            Crafting engaging, responsive and user-friendly web applications with a passion for innovation and a drive to deliver high-quality solutions.
           </motion.p>
           
           <motion.div

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Image component
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 gradient-text">Mujaku Tonderai</h3>
+            {/* Logo goes here */}
+            <div className="mb-4">
+              <Link href="/dashboard">
+                <Image
+                  src="/logo.png" 
+                  alt="XeroTech Softwares Logo"
+                  width={150} // Adjust width as needed
+                  height={40} // Adjust height as needed
+                  className="h-10 w-auto" // Tailwind classes for responsive sizing
+                />
+              </Link>
+            </div>
+            <h3 className="text-lg font-semibold mb-4 gradient-text">XeroTech Softwares</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Software Developer & Web Developer passionate about creating innovative solutions.
+              Software Developers & Web Developers passionate about creating innovative solutions.
             </p>
           </div>
 
@@ -49,7 +62,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-gray-600 dark:text-gray-400">
-                <a href="mailto:your.email@example.com" className="hover:text-gray-900 dark:hover:text-white">
+                <a href="mailto:mujakutonde@gmail.com" className="hover:text-gray-900 dark:hover:text-white">
                   mujakutonde@gmail.com
                 </a>
               </li>
@@ -59,7 +72,7 @@ export default function Footer() {
                   <a href="https://github.com/mjkut" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                     GitHub
                   </a>
-                  <a href="https://linkedin.com/in/Mujaku-Tonderai" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                  <a href="https://linkedin.com/in/mujakutonde@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                     LinkedIn
                   </a>
                 </div>
@@ -70,10 +83,10 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-center text-gray-600 dark:text-gray-400">
-            © {currentYear} XeroTech. All rights reserved.
+            © {currentYear} XeroTech Softwares. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
-} 
+}

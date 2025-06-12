@@ -12,42 +12,42 @@ const Hero = () => {
     {
       id: 1,
       title: "Web Development",
-      description: "Creating modern, responsive websites and web applications using cutting-edge technologies. From concept to deployment, I build digital experiences that engage users and drive results.",
+      description: "Creating modern, responsive websites and web applications using cutting-edge technologies. From concept to deployment, we build digital experiences that engage users and drive results.",
       image: "/hero/web.jpg",
       gradient: "from-blue-600 to-purple-600"
     },
     {
       id: 2,
       title: "Custom Software Development",
-      description: "Building tailored software solutions that perfectly fit your business needs. From desktop applications to complex systems, I deliver robust and scalable software architecture.",
+      description: "Building tailored software solutions that perfectly fit your business needs. From desktop applications to complex systems, we deliver robust and scalable software architecture.",
       image: "/hero/software.jpg",
       gradient: "from-emerald-600 to-blue-600"
     },
     {
       id: 3,
       title: "Custom Odoo Module Development",
-      description: "Extending and customizing Odoo ERP with specialized modules. I create seamless integrations and custom functionalities to optimize your business processes.",
+      description: "Extending and customizing Odoo ERP with specialized modules. We create seamless integrations and custom functionalities to optimize your business processes.",
       image: "/hero/odoo.jpg",
       gradient: "from-purple-600 to-pink-600"
     },
     {
       id: 4,
       title: "Database Management",
-      description: "Designing, optimizing, and maintaining robust database systems. From schema design to performance tuning, I ensure your data is secure, accessible, and efficiently managed.",
+      description: "Designing, optimizing and maintaining robust database systems. From schema design to performance tuning, we ensure your data is secure, accessible and efficiently managed.",
       image: "/hero/database.jpg",
       gradient: "from-orange-600 to-red-600"
     },
     {
       id: 5,
       title: "AI and ML Systems Development",
-      description: "Building intelligent systems that learn and adapt. From machine learning models to AI-powered applications, I transform data into actionable insights and automated solutions.",
+      description: "Building intelligent systems that learn and adapt. From machine learning models to AI-powered applications, we transform data into actionable insights and automated solutions.",
       image: "/hero/ai.png",
       gradient: "from-indigo-600 to-purple-600"
     },
     {
       id: 6,
       title: "Open-source Software Setup",
-      description: "Implementing and configuring open-source solutions for your infrastructure. I help you leverage the power of community-driven software to reduce costs and increase flexibility.",
+      description: "Implementing and configuring open-source solutions for your infrastructure. we help you leverage the power of community-driven software to reduce costs and increase flexibility.",
       image: "/hero/custom.jpg",
       gradient: "from-green-600 to-teal-600"
     },
