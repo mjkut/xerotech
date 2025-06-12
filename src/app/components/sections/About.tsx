@@ -189,10 +189,10 @@ export default function About() {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              About Me
+              About Us
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Passionate software developer with expertise in full-stack development,
+              Passionate software developers with expertise in full-stack development,
               creating scalable solutions and delivering exceptional user experiences.
             </p>
           </div>
