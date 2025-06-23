@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mujaku Tonderai - Software Developer",
-  description: "Full-stack developer specializing in modern web solutions, custom software, and AI/ML applications.",
+  title: "XeroTech Solutions",
+  description: "Full-stack developers specializing in modern web solutions, custom software and AI/ML applications.",
   keywords: "software developer, web developer, full stack, AI/ML, custom software",
   icons: {
     icon: [
@@ -52,7 +52,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900`}
       >
         {children}
-        {/* Add Analytics and SpeedInsights components here */}
+        {/* Analytics and SpeedInsights components */}
         <Analytics />
         <SpeedInsights />
       </body>

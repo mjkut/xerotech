@@ -62,7 +62,7 @@ const skills: Skill[] = [
     category: "Emerging Tech & Tools",
     items: [
       { name: "Machine Learning (scikit-learn, TensorFlow)", level: 70 },
-      { name: "OpenCV (Sign Language Recognition)", level: 70 },
+      { name: "OpenCV (Object Recognition)", level: 70 },
       { name: "Blockchain (Document Verification)", level: 65 },
       { name: "Git & GitHub", level: 90 },
     ],
@@ -98,7 +98,7 @@ const experiences: Experience[] = [
     period: "2022 - Present",
     description: [
       "Developed custom web applications for various clients",
-      "Built modern, responsive websites using Next.js and React",
+      "Built modern, responsive websites using Django, Next.js and React",
       "Created Python-based software solutions for automation and data processing",
       "Delivered end-to-end development services from design to deployment"
     ],
@@ -110,7 +110,7 @@ const experiences: Experience[] = [
     period: "2024 - Present",
     description: [
       "Built machine learning models such as Iris flower classification as part of learning projects",
-      "Prototyping a sign language recognition and translation tool using computer vision and AI",
+      "Prototyping an object recognition tool using computer vision and AI",
       "Researching blockchain-based document verification and digital identity management"
     ],
     technologies: ["Python", "scikit-learn", "OpenCV", "TensorFlow", "Blockchain"]

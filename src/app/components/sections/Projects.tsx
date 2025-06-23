@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react'; // Removed useEffect as it's no longer used
+import { useState } from 'react'; 
 import { ExternalLink, Github, X, Eye, Code, Star } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -14,12 +14,12 @@ interface Project {
   technologies: string[];
   image: string;
   results: string[];
-  liveUrl: string; // Ensure this is always a URL, even if a placeholder
-  githubUrl: string; // Ensure this is always a URL, even if a placeholder
+  liveUrl: string; 
+  githubUrl: string; 
   category: string;
 }
 
-// Sample project data - you can replace with your actual projects
+// Sample project data 
 const projects: Project[] = [
   {
     id: 1,
@@ -33,8 +33,8 @@ const projects: Project[] = [
       "Faster load times and responsiveness",
       "Increased user engagement and feedback"
     ],
-    liveUrl: "https://www.zingsa.org.zw/", // Example: replace with actual URL
-    githubUrl: "https://github.com/mjkut/zingsa-website-redesign", // Example: replace with actual URL
+    liveUrl: "#", 
+    githubUrl: "#", 
     category: "Web Application"
   },
   {
@@ -49,7 +49,7 @@ const projects: Project[] = [
       "Request system for out-of-stock products",
       "Improved stock management process"
     ],
-    liveUrl: "#", // Placeholder if no live demo
+    liveUrl: "#",
     githubUrl: "https://github.com/mjkut/robust",
     category: "Web Application"
   },
@@ -81,7 +81,7 @@ const projects: Project[] = [
       "Admin moderation panel",
       "Secure file handling and link expiration"
     ],
-    liveUrl: "#", // Placeholder if no live demo
+    liveUrl: "#", 
     githubUrl: "https://github.com/mjkut/anon-evidence",
     category: "Security & Privacy"
   }
@@ -101,7 +101,7 @@ const ProjectCard = ({ project, onClick }: { project: Project, onClick: () => vo
       className="bg-gray-800/30 backdrop-blur-xl rounded-2xl overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick} // Make the whole card clickable for details
+      onClick={onClick} 
     >
       {/* Project Image */}
       <div className="relative h-56 w-full overflow-hidden">

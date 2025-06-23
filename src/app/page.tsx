@@ -49,9 +49,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            <span className="gradient-text">Software Developers</span>
-            <br />
-            <span className="gradient-text">& Web Developers</span>
+            <span className="gradient-text">XeroTech Solutions</span>
           </motion.h1>
           
           <motion.p

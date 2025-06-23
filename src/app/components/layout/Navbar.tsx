@@ -67,7 +67,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     className="object-contain"
                   />
                   <span className="text-sm font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hidden sm:block"> {/* Smaller text, gradient, hide on mobile */}
-                    XeroTech Softwares
+                    XeroTech Solutions
                   </span>
                 </div>
               </Link>

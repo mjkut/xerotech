@@ -17,14 +17,14 @@ export default function Footer() {
               <Link href="/dashboard">
                 <Image
                   src="/logo.png" 
-                  alt="XeroTech Softwares Logo"
+                  alt="XeroTech Solutions Logo"
                   width={150} // Adjust width as needed
                   height={40} // Adjust height as needed
                   className="h-10 w-auto" // Tailwind classes for responsive sizing
                 />
               </Link>
             </div>
-            <h3 className="text-lg font-semibold mb-4 gradient-text">XeroTech Softwares</h3>
+            <h3 className="text-lg font-semibold mb-4 gradient-text">XeroTech Solutions</h3>
             <p className="text-gray-600 dark:text-gray-400">
               Software Developers & Web Developers passionate about creating innovative solutions.
             </p>
