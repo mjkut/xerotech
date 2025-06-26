@@ -50,7 +50,7 @@ const projects: Project[] = [
       "Improved stock management process"
     ],
     liveUrl: "#",
-    githubUrl: "https://github.com/mjkut/robust",
+    githubUrl: "#",
     category: "Web Application"
   },
   {
@@ -66,7 +66,7 @@ const projects: Project[] = [
       "Foundation for affiliate-based revenue"
     ],
     liveUrl: "#", // Placeholder if no live demo
-    githubUrl: "https://github.com/mjkut/tour-zimbabwe",
+    githubUrl: "#",
     category: "Web Application"
   },
   {
@@ -82,7 +82,7 @@ const projects: Project[] = [
       "Secure file handling and link expiration"
     ],
     liveUrl: "#", 
-    githubUrl: "https://github.com/mjkut/anon-evidence",
+    githubUrl: "#",
     category: "Security & Privacy"
   }
 ];
